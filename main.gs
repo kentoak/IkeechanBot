@@ -5,7 +5,7 @@ function setTrigger(){
     ScriptApp.newTrigger('scraping').timeBased().at(time).create();
   }
   
-  var CHANNEL_ACCESS_TOKEN = '14B7DEPIV2MPIKKn1dZ7HAPM'; // Channel_access_tokenを登録
+  var CHANNEL_ACCESS_TOKEN = 'slackワークスペースのトークン'; // Channel_access_tokenを登録
   
   function scraping() {
     var url = 'https://www.rikako-ikee.jp/';
@@ -28,7 +28,7 @@ function setTrigger(){
     console.log("lastRow: ",lastRow)
     var pre_info = sheet.getRange(lastRow,1).getValue();
     
-    var post_url = "https://hooks.slack.com/services/"+"T026B3697G9/B026512Q7V2/YVN4jo0LVaT7uGflaV4yC0zP"; //postメソッドのurl
+    var post_url = "https://hooks.slack.com/services/"+"チャンネル情報"; //postメソッドのurl
     
     
     if(info != pre_info){//更新
