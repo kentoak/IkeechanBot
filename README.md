@@ -7,7 +7,7 @@
 1. ワークスペースを設定→Menu→API
 2. Create an app→From scratch
 3. Permissions→Scopes→Add an OAuth Scopeでchat:write.public
-4. Incoming WebhooksをOn→Add New Webhook to Workspace→チャンネル選択→https://hooks.slack.com/services/　以降をメモ
+4. Incoming WebhooksをOn→Add New Webhook to Workspace→チャンネル選択→`https://hooks.slack.com/services/`　以降をメモ
 5. Basic Information→Verification Tokenをメモ
 6. Display Informationをカスタマイズ→Save Changes
 
