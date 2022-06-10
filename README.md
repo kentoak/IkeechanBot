@@ -17,5 +17,3 @@
 3. main.gsをコピペ、メモった必要情報を記入
 
 
-# Reference
-https://github.com/Yutarotaro/NachanBot を参考にしています。
