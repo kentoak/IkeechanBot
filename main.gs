@@ -26,14 +26,27 @@ function setTrigger(){
     console.log("sheet: ",sheet)
     var lastRow = sheet.getLastRow();
     console.log("lastRow: ",lastRow)
-    var pre_info = sheet.getRange(lastRow,1).getValue();
+    var range = sheet.getDataRange();// そのシート上の値が存在するセル範囲を取得
+    var range = sheet.getDataRange();// そのシート上の値が存在するセル範囲を取得
+    var values = range.getValues();// そのセル範囲にある値の多次元配列を取得
+    var matchflag = false
+    for (var i = 0; i < values.length; i++) {
+        //console.log("val",values[i][0])
+        pre_info = values[i][0]
+        if (info == pre_info){
+        console.log("matched!")
+        matchflag = true
+        }
+    }
+    //var pre_info = sheet.getRange(lastRow,1).getValue();
+    //console.log("pre_info is ",pre_info)
     
     var post_url = "https://hooks.slack.com/services/"+"チャンネル情報"; //postメソッドのurl
     
     
-    if(info != pre_info){//更新
+    if(!matchflag){//更新
       sheet.getRange(lastRow+1, 1).setValue(info);
-    
+      sheet.getRange(lastRow+1, 2).setValue(header);
       var jsondata = {
         "text": header+'\n'+info,
         "attachments": attachments, //リッチなメッセージを送る用データ
