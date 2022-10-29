@@ -1,5 +1,6 @@
 # IkeechanBot
-[池江璃花子ちゃんのHP](https://www.rikako-ikee.jp/)からInformation欄の最新情報をslackで通知してくれる
+[池江璃花子ちゃんのHP](https://www.rikako-ikee.jp/)からInformation欄の最新情報をslackで通知してくれる。
+参照 https://github.com/Yutarotaro/NachanBot 
 
 # Usage
 
